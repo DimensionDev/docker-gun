@@ -20,3 +20,7 @@ services:
     volumes:
       - ./data:/app/data
 ```
+
+## LICENSE
+
+[AGPL 3.0](LICENSE)
