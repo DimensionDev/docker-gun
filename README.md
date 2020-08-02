@@ -1,5 +1,11 @@
 # docker-gun
 
+> The is an open source cybersecurity protocol for syncing decentralized graph data.
+>
+> Official: <https://github.com/amark/gun>
+
+The is unofficial GUN server docker image
+
 ## docker-compose.yaml (sample)
 
 ```yaml
