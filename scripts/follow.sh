@@ -9,4 +9,4 @@ VERSION=$(npm info gun version)
 git add .
 git commit -m "new version: $VERSION"
 git tag -a "$VERSION" -m "new version: $VERSION"
-git push --all
+git push --tags
