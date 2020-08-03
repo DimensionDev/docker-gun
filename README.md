@@ -1,8 +1,8 @@
 # docker-gun
 
-Unofficial Docker image for [GUN.ECO](https://gun.eco)
+Unofficial Docker image for [GUN.eco](https://gun.eco).
 
-[known-issues](https://github.com/DimensionDev/docker-gun/blob/master/KNOWN-ISSUES.md)
+There are some [known issues](https://github.com/DimensionDev/docker-gun/blob/master/KNOWN-ISSUES.md).
 
 ## docker-compose.yaml (sample)
 
