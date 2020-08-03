@@ -1,0 +1,19 @@
+name: Follow latest
+
+on:
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  follow:
+    runs-on: ubuntu-latest
+    continue-on-error: false
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: 12.x
+      - name: Install
+        run: npm ci
+      - name: Follow new version
+        run: scripts/follow.sh

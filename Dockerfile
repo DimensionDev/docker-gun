@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 WORKDIR /app
 COPY . .
-RUN npm ci --production
+RUN npm ci
 
 WORKDIR /app/data
 EXPOSE 8765
