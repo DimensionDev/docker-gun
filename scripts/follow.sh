@@ -1,7 +1,7 @@
 #!/bin/bash
 set -x
 npm install gun@latest
-if [[ -n $(git status -s) ]]; then
+if [[ -z $(git status -s) ]]; then
 	echo "no new version found."
 	exit 0
 fi
