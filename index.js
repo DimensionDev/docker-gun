@@ -4,14 +4,21 @@ const Gun = require("gun");
 
 const PORT = 8765;
 
-const files = path.join(__dirname, "files");
-const resources = fs.existsSync(files)
-  ? files
-  : path.dirname(require.resolve("gun/examples/http"));
+let public = path.join(__dirname, "files");
+if (!fs.existsSync(public)) {
+  public = path.dirname(require.resolve("gun/examples/http"));
+}
 
-Gun({
-  web: require("http").createServer(Gun.serve(resources)).listen(PORT),
-  multicast: false,
-});
+const server = require("http")
+  .createServer(Gun.serve(public))
+  .on("listening", () => {
+    console.log(`Relay peer started on port ${PORT} with /gun`);
+  })
+  .on("error", (err) => {
+    console.log("Error starting server: ", err);
+    process.exit(1);
+  });
 
-console.log(`Relay peer started on port ${PORT} with /gun`);
+Gun({ web: server, multicast: false });
+
+server.listen(PORT);
