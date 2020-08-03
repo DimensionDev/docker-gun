@@ -1,10 +1,8 @@
 # docker-gun
 
-> The is an open source cybersecurity protocol for syncing decentralized graph data.
->
-> Official: <https://github.com/amark/gun>
+Unofficial Docker image for [GUN.ECO](https://gun.eco)
 
-The is unofficial GUN server docker image
+[known-issues](https://github.com/DimensionDev/docker-gun/blob/master/KNOWN-ISSUES.md)
 
 ## docker-compose.yaml (sample)
 
@@ -23,4 +21,4 @@ services:
 
 ## LICENSE
 
-[AGPL 3.0](LICENSE)
+[AGPL 3.0](https://github.com/DimensionDev/docker-gun/blob/master/LICENSE)
