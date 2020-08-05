@@ -4,10 +4,21 @@ const Gun = require("gun");
 
 const PORT = 8765;
 
-let public = path.join(__dirname, "files");
-if (!fs.existsSync(public)) {
-  public = path.dirname(require.resolve("gun/examples/http"));
-}
+const public = (() => {
+  const public = path.join(__dirname, "files");
+  if (fs.existsSync(public)) {
+    return public;
+  }
+  return path.dirname(require.resolve("gun/examples/http"));
+})();
+
+const options = (() => {
+  const options = path.join(__dirname, "options.json");
+  if (fs.existsSync(options)) {
+    return JSON.stringify(fs.readFileSync(options, "utf-8"));
+  }
+  return {};
+})();
 
 const server = require("http")
   .createServer(Gun.serve(public))
@@ -19,6 +30,6 @@ const server = require("http")
     process.exit(1);
   });
 
-Gun({ web: server, multicast: false });
+Gun({ ...options, web: server, multicast: false });
 
 server.listen(PORT);

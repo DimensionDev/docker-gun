@@ -16,6 +16,8 @@ services:
     ports:
       - "127.0.0.1:8765:8765"
     volumes:
+      # ./options.json:/app/options.json
+      # ./files:/app/files # control web server static files
       - ./data:/app/data
 ```
 
