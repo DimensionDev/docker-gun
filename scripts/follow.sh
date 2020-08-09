@@ -5,11 +5,14 @@ set -x
 npm install gun@latest
 if [[ -z $(git status -s) ]]; then
 	echo "no new version found."
-	exit 0
 else
 	VERSION=$(npm info gun@latest version)
+	git config user.name "Dimension Bot"
+	git config user.email "bot@dimension.im"
+	git fetch --tags
 	git add .
-	git commit -m "new version: $VERSION"
-	git tag -a "$VERSION" -m "new version: $VERSION"
-	git push --tags
+	git commit --message "new version: $VERSION"
+	git tag --force --annotate "$VERSION" --message "new version: $VERSION"
+	git push --force --tags
+	git push
 fi
