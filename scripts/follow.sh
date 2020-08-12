@@ -5,7 +5,7 @@ npm install gun@latest
 git diff-index --quiet HEAD
 if [[ "$?" == "0" ]]; then
 	echo "no new version found."
-	exit 1
+	exit
 fi
 
 set -o pipefail
