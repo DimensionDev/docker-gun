@@ -10,11 +10,11 @@ fi
 
 set -o pipefail
 VERSION=$(npm info gun@latest version)
-git config user.name "Dimension Bot"
-git config user.email "bot@dimension.im"
+git config user.name "github-actions"
+git config user.email "github-actions@github.com"
 git fetch --tags
 git add .
 git commit --message "new version: $VERSION"
-git tag --force --annotate "$VERSION" --message "new version: $VERSION"
-git push
-git push --follow-tags
+git tag --force --annotate "$VERSION"
+git push --force --tags
+git push --force
