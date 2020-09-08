@@ -15,6 +15,6 @@ git config user.email "github-actions@github.com"
 git fetch --tags
 git add .
 git commit --message "new version: $VERSION"
-git tag --force --annotate "$VERSION"
-git push --force --tags
+git tag --force --annotate "$VERSION" HEAD
 git push --force
+git push --force --tags
