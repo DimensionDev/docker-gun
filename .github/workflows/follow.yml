@@ -9,13 +9,11 @@ on:
 
 jobs:
   follow:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     continue-on-error: false
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
-        with:
-          node-version: 12.x
       - name: Install
         run: npm ci
       - name: Follow new version
