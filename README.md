@@ -1,13 +1,15 @@
 # docker-gun
 
 [![Docker Automated Build][shield-automated]][docker-image]
+[![Get your own image badge on microbadger.com][shield-layers]][micro-badger]
 [![Docker Pulls][shield-pulls]][docker-image]
 [![Docker Stars][shield-stars]][docker-image]
-[![Get your own commit badge on microbadger.com][shield-commit]][micro-badger]
-[![Get your own image badge on microbadger.com][shield-layers]][micro-badger]
-[![Get your own version badge on microbadger.com][shield-version]][micro-badger]
 
-Pull from the [Docker Hub][docker-image].
+Pull from the
+[Docker Hub][docker-image]
+[![Get your own version badge on microbadger.com][shield-version]][micro-badger]
+[![Get your own commit badge on microbadger.com][shield-commit]][micro-badger]
+.
 
 [docker-image]: https://hub.docker.com/r/dimensiondev/gun
 [micro-badger]: https://microbadger.com/images/dimensiondev/gun
