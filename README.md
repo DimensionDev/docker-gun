@@ -17,7 +17,7 @@ Pull from the [Docker Hub][docker-image] [![Image Version][shield-version]][micr
 
 Unofficial Docker image for [GUN.eco](https://gun.eco).
 
-There are some [known issues](https://github.com/DimensionDev/docker-gun/blob/master/KNOWN-ISSUES.md).
+There are some [caveats](https://github.com/DimensionDev/docker-gun/blob/master/caveats.md).
 
 ## command line
 
