@@ -9,12 +9,10 @@ on:
 
 jobs:
   follow:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     continue-on-error: false
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
-      - name: Install
-        run: npm ci
-      - name: Follow new version
-        run: scripts/follow.sh
+      - run: npm ci
+      - run: scripts/follow.sh
